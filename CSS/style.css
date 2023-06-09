@@ -1,4 +1,50 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+li {
+  list-style: none;
+}
+.fb,
+.ig,
+.tw {
+    color: white;
+}
+.fb:hover{
+    color: #1871e7;
+    transition: 200ms;
+}
+.tw:hover{
+    color: #1c93e4;
+    transition: 200ms;
+}
+.ig:hover{
+    color: #f16a85;
+    transition: 200ms;
+}
+@media (max-width: 991px) {
+  .displayBlock {
+    display: flex;
+    flex-direction: column;
+  }
+  .margen {
+    margin-bottom: 15px;
+  }
 }
