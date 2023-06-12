@@ -10,34 +10,53 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  background-color: #032A7E;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230F389E'/%3E%3Cstop offset='1' stop-color='%23032A7E'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 main {
   flex: 1;
 }
-
+nav {
+  background-color: #3144ac;
+  background-image: linear-gradient(180deg, #3144ac 0%, #4cb4ec 100%);
+}
 footer {
   flex-shrink: 0;
+  background-color: #3144ac;
+  background-image: linear-gradient(180deg, #3144ac 0%, #4cb4ec 100%);
 }
 li {
   list-style: none;
 }
+main {
+  margin-top: 92.78px;
+}
 .fb,
 .ig,
 .tw {
-    color: white;
+  color: white;
 }
-.fb:hover{
-    color: #1871e7;
-    transition: 200ms;
+.fb:hover {
+  color: #1871e7;
+  transition: 200ms;
 }
-.tw:hover{
-    color: #1c93e4;
-    transition: 200ms;
+.tw:hover {
+  color: #1c93e4;
+  transition: 200ms;
 }
-.ig:hover{
-    color: #f16a85;
-    transition: 200ms;
+.ig:hover {
+  color: #f16a85;
+  transition: 200ms;
+}
+.nav-link {
+  color: aliceblue;
+}
+.nav-link:hover {
+  color: rgb(61, 61, 61);
+  transition: 150ms;
 }
 @media (max-width: 991px) {
   .displayBlock {
@@ -46,5 +65,10 @@ li {
   }
   .margen {
     margin-bottom: 15px;
+  }
+}
+@media (min-width: 767px){
+  .displayNone{
+    display: none;
   }
 }
