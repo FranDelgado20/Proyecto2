@@ -32,7 +32,7 @@ li {
   list-style: none;
 }
 main {
-  margin-top: 95.13px;
+  margin-top: 92.78px;
 }
 .fb,
 .ig,
@@ -65,5 +65,10 @@ main {
   }
   .margen {
     margin-bottom: 15px;
+  }
+}
+@media (min-width: 767px){
+  .displayNone{
+    display: none;
   }
 }
