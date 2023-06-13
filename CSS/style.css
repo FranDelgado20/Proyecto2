@@ -92,3 +92,26 @@ main {
     display: none;
   }
 }
+.imagen {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.texto {
+  flex-grow: 1;
+}
+
+.borde{
+align-items: center;
+border: 2px solid black;
+border-radius: 25px;
+padding: 25px;
+}
+.columna{
+display: flex;
+}
+.centrar {
+text-align: center;
+}
