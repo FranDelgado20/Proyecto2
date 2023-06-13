@@ -49,7 +49,9 @@
               </li>
             </ul>
             <div class="my-2 displayBlock d-flex">
-              <a class="me-3 nav-link" href="/HTML/Register.html">Registrarse</a>
+              <a href="/HTML/Login.html" class="me-3 nav-link"
+                >Iniciar sesión</a
+              >
             </div>
           </div>
         </div>
@@ -60,8 +62,9 @@
         <div class="row">
           <div class="col-12 d-flex justify-content-center">
             <form class="w-75 form-login">
-              <h2 class="bordeH2 text-white">Ingresá a tu cuenta</h2>
-    
+              <h2 class="bordeH2 text-white">
+                Ingresá tus datos para registrarte
+              </h2>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label text-light"
                   >Email</label
@@ -71,10 +74,24 @@
                     ><i class="bi bi-envelope"></i
                   ></span>
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
                     id="exampleInputEmail1"
                     placeholder="ejemplo@mail.com"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="user" class="form-label text-light">Usuario</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="bi bi-person-circle"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="user"
+                    placeholder="Nombre de usuario"
                   />
                 </div>
               </div>
@@ -98,16 +115,12 @@
                 <button type="button" class="btn boton-login">Ingresar</button>
               </div>
               <hr class="text-white" />
-              <a href="/HTML/Register.html" class="text-decoration-none text-light"
-                >¿No tienes cuenta? Registrate aquí</a
+              <a href="/HTML/Login.html" class="text-decoration-none text-light"
+                >¿Ya tienes cuenta? Inicia sesión</a
               >
             </form>
           </div>
-          <div class="col-12 d-flex justify-content-center mt-5">
-            <img src="/IMG/logo.png" alt="Logo"/>
-          </div>
         </div>
-      </div>
     </main>
     <footer class="py-1">
       <div class="container-fluid">
