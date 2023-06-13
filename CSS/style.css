@@ -78,19 +78,8 @@ main {
   
   box-shadow: 9px 9px 0px 0px rgb(8, 147, 221);
 }
-@media (max-width: 991px) {
-  .displayBlock {
-    display: flex;
-    flex-direction: column;
-  }
-  .margen {
-    margin-bottom: 15px;
-  }
-}
-@media (min-width: 767px){
-  .displayNone{
-    display: none;
-  }
+.borde-section{
+  border-bottom: 3px solid white;
 }
 .imagen {
   width: 100px;
@@ -109,9 +98,19 @@ border: 2px solid black;
 border-radius: 25px;
 padding: 25px;
 }
-.columna{
-display: flex;
+
+
+@media (max-width: 991px) {
+  .displayBlock {
+    display: flex;
+    flex-direction: column;
+  }
+  .margen {
+    margin-bottom: 15px;
+  }
 }
-.centrar {
-text-align: center;
+@media (min-width: 767px){
+  .displayNone{
+    display: none;
+  }
 }
