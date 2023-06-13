@@ -58,6 +58,26 @@ main {
   color: rgb(61, 61, 61);
   transition: 150ms;
 }
+.bordeH2{
+  border-bottom: 3px solid;
+  padding: 5px;
+}
+.boton-login{
+  background-color: white
+}
+.boton-login:hover {
+  background-color: #1d4aac;
+  color: white;
+  transition: 1000ms;
+  border:1px white solid;
+}
+.form-login{
+  border: 3px solid;
+  border-radius: 3%;
+  padding: 40px;
+  
+  box-shadow: 9px 9px 0px 0px rgb(8, 147, 221);
+}
 @media (max-width: 991px) {
   .displayBlock {
     display: flex;
