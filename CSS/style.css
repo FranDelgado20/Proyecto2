@@ -62,10 +62,10 @@ main {
   border-bottom: 2px solid;
   padding: 5px;
 }
-.boton-login{
+.botones{
   background-color: white
 }
-.boton-login:hover {
+.botones:hover {
   background-color: #1d4aac;
   color: white;
   transition: 444ms;
@@ -81,24 +81,6 @@ main {
 .borde-section{
   border-bottom: 3px solid white;
 }
-.imagen {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 10px;
-}
-.texto {
-  flex-grow: 1;
-}
-
-.borde{
-align-items: center;
-border: 2px solid black;
-border-radius: 25px;
-padding: 25px;
-}
-
 
 @media (max-width: 991px) {
   .displayBlock {
