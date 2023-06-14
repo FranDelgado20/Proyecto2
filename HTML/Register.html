@@ -77,9 +77,13 @@
                   <input
                     type="email"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="emailId"
+                    name="email"
                     placeholder="ejemplo@mail.com"
                   />
+                </div>
+                <div id="errorDivEmail">
+                  ¡Debe ingresar un email!
                 </div>
               </div>
               <div class="mb-3">
@@ -91,9 +95,13 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="user"
+                    id="userId"
+                    name="user"
                     placeholder="Nombre de usuario"
                   />
+                </div>
+                <div id="errorDivUser">
+                  ¡Debe ingresar un nombre de usuario!
                 </div>
               </div>
               <div class="mb-3">
@@ -107,13 +115,37 @@
                   <input
                     type="password"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="passId"
+                    name="pass"
                     placeholder="*************"
                   />
                 </div>
+                <div id="errorDivP">
+                  ¡Debe ingresar una contraseña!
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label text-light"
+                  >Repetir Contraseña</label
+                >
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1"
+                    ><i class="bi bi-key"></i
+                  ></span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="repeatPassId"
+                    name="repeatPass"
+                    placeholder="*************"
+                  />
+                </div>
+                <div id="errorDivRP">
+                  ¡Debe repetir su contraseña!
+                </div>
               </div>
               <div class="justify-content-end d-flex">
-                <button type="button" class="btn botones">Registrarse</button>
+                <button type="button" class="btn botones" id="botonId" onclick="register()">Registrarse</button>
               </div>
               <hr class="text-white" />
               <a href="/HTML/Login.html" class="text-decoration-none text-light"
@@ -157,5 +189,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="/JS/Register.js"></script>
   </body>
 </html>

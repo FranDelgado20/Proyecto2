@@ -81,9 +81,13 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="emailId"
+                    name="email"
                     placeholder="ejemplo@mail.com"
                   />
+                </div>
+                <div class="text-danger" id="divError1">
+                  <b>¡Debes ingresar tu email! </b> 
                 </div>
               </div>
               <div class="mb-3">
@@ -97,13 +101,18 @@
                   <input
                     type="password"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="passId"
+                    name="pass"
                     placeholder="*************"
                   />
                 </div>
+
+              </div>
+              <div class="text-danger" id="divError2">
+                <b>¡Debes ingresar tu contraseña!  </b>
               </div>
               <div class="justify-content-end d-flex">
-                <button type="button" class="btn botones">Ingresar</button>
+                <button type="button" class="btn botones" id="botonId" onclick="login()">Ingresar</button>
               </div>
               <hr class="text-white" />
               <a
@@ -153,5 +162,6 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="/JS/Login.js"></script>
   </body>
 </html>
