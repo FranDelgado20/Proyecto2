@@ -10,7 +10,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #032A7E;
+  background-color: #032a7e;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230F389E'/%3E%3Cstop offset='1' stop-color='%23032A7E'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
@@ -56,14 +56,14 @@ main {
 }
 .nav-link:hover {
   color: rgb(61, 61, 61);
-  transition: 150ms;
+  transition: 200ms;
 }
-.bordeH2{
+.bordeH2 {
   border-bottom: 2px solid;
   padding: 5px;
 }
-.botones{
-  background-color: white
+.botones {
+  background-color: white;
 }
 .botones:hover {
   background-color: #1d4aac;
@@ -71,22 +71,27 @@ main {
   transition: 444ms;
   border: 1px white solid;
 }
-.form-login{
+.form-login {
   border: 3px solid;
   border-radius: 3%;
   padding: 30px;
-  
+
   box-shadow: 9px 9px 0px 0px rgb(8, 147, 221);
 }
-.borde-section{
+.borde-section {
   border-bottom: 3px solid white;
 }
-.tamano{
+.tamano {
   width: 80%;
 }
-.colorCards{
+.colorCards {
   background-color: #3144ac;
-  background-image: linear-gradient(180deg, #3144ac 0%, #324fdc 50%, #4cb4ec 100%);  
+  background-image: linear-gradient(
+    180deg,
+    #3144ac 0%,
+    #324fdc 50%,
+    #4cb4ec 100%
+  );
 }
 .sombra {
   box-shadow: 0px 1px 20px 9px rgba(0, 0, 0, 0.82);
@@ -102,8 +107,8 @@ main {
     margin-bottom: 15px;
   }
 }
-@media (min-width: 767px){
-  .displayNone{
+@media (min-width: 767px) {
+  .displayNone {
     display: none;
   }
 }
