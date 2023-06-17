@@ -32,31 +32,26 @@
             >
               <i class="bi bi-list text-white fs-2"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    href="/index.html"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item">
-                    <a
-                      class="nav-link "
-                      aria-current="page"
-                      href="/HTML/Productos.html"
-                      >Productos</a
-                    >
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="/HTML/Sobrenosotros.html"
-                    >Sobre nosotros</a
-                  >
-                </li>
-              </ul>
-              <div class="my-2 displayBlock d-flex">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              <div class="d-flex displayBlock my-2" id="divNavbar1">
+                <a
+                class="nav-link me-3 my-2"
+                aria-current="page"
+                href="/index.html"
+                >Inicio</a
+              >
+                <a
+                  class="nav-link me-3 my-2"
+                  aria-current="page"
+                  href="/HTML/Productos.html"
+                  >Productos</a
+                >
+
+              <a class="nav-link me-3 my-2" href="/HTML/Sobrenosotros.html"
+                >Sobre nosotros</a
+              >
+              </div>
+              <div class="my-2 displayBlock d-flex" id="divNavbar2">
                 <a
                   href="/HTML/Login.html"
                   class=" me-3 nav-link margen"
@@ -264,5 +259,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/JS/index.js"></script>
+    <script src="/JS/Logout.js"></script>
   </body>
 </html>
