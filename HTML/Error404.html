@@ -35,28 +35,26 @@
           >
             <i class="bi bi-list text-white fs-2"></i>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="/HTML/Productos.html"
-                  >Productos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/HTML/Sobrenosotros.html"
-                  >Sobre nosotros</a
-                >
-              </li>
-            </ul>
-            <div class="my-2 displayBlock d-flex">
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <div class="d-flex displayBlock my-2" id="divNavbar1">
+              <a
+                class="nav-link me-3 my-2"
+                aria-current="page"
+                href="/index.html"
+                >Inicio</a
+              >
+              <a
+                class="nav-link me-3 my-2"
+                aria-current="page"
+                href="/HTML/Productos.html"
+                >Productos</a
+              >
+
+              <a class="nav-link me-3 my-2" href="/HTML/Sobrenosotros.html"
+                >Sobre nosotros</a
+              >
+            </div>
+            <div class="my-2 displayBlock d-flex" id="divNavbar2">
               <a href="/HTML/Login.html" class="me-3 nav-link margen"
                 >Iniciar sesión</a
               >
@@ -69,23 +67,23 @@
       </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="row">
-              <div class="col-12 text-center">
-                <img
-                  class="img-fluid rounded-5"
-                  src="/IMG/error404.png"
-                  alt=""
-                  width="600px"
-                />
-              </div>
-              <div class="col-12 text-white text-center mb-3">
-                <hr>
-                <h4>Parece que no hay nada por aquí...</h4>
-                <a href="/index.html" class="btn botones my-2">Volver a Inicio</a>
-              </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img
+              class="img-fluid rounded-5"
+              src="/IMG/error404.png"
+              alt=""
+              width="600px"
+            />
           </div>
+          <div class="col-12 text-white text-center mb-3">
+            <hr />
+            <h4>Parece que no hay nada por aquí...</h4>
+            <a href="/index.html" class="btn botones my-2">Volver a Inicio</a>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="py-1">
       <div class="container-fluid">
@@ -108,9 +106,15 @@
           <div class="col-lg-3 col-md-6 col-sm-12 my-2">
             <h4 class="text-white text-center">Buscanos en nuestras redes</h4>
             <div class="text-center">
-              <a href="/HTML/Error404.html"><i class="bi bi-facebook fs-1 mx-2 fb"></i></a>
-              <a href="/HTML/Error404.html"><i class="bi bi-twitter fs-1 mx-2 tw"></i></a>
-              <a href="/HTML/Error404.html"><i class="bi bi-instagram fs-1 mx-2 ig"></i></a>
+              <a href="/HTML/Error404.html"
+                ><i class="bi bi-facebook fs-1 mx-2 fb"></i
+              ></a>
+              <a href="/HTML/Error404.html"
+                ><i class="bi bi-twitter fs-1 mx-2 tw"></i
+              ></a>
+              <a href="/HTML/Error404.html"
+                ><i class="bi bi-instagram fs-1 mx-2 ig"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -121,6 +125,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="JS/js.js"></script>
+    <script src="/JS/js.js"></script>
+    <script src="/JS/Logout.js"></script>
   </body>
 </html>
