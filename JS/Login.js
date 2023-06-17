@@ -53,7 +53,7 @@ const login = () => {
       if (userExist[0].role === "user") {
         usersLS[userIndex].login = true;
         localStorage.setItem("users", JSON.stringify(usersLS));
-        location.href = `/HTML/Productos.html?id=${userExist[0].id}`;
+        location.href = `/index.html?id=${userExist[0].id}`;
       } else if (userExist[0].role === "admin") {
         usersLS[userIndex].login = true;
         localStorage.setItem("users", JSON.stringify(usersLS));
