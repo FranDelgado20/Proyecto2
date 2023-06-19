@@ -98,6 +98,7 @@ main {
   -webkit-box-shadow: 0px 1px 20px 9px rgba(0, 0, 0, 0.82);
   -moz-box-shadow: 0px 1px 20px 9px rgba(0, 0, 0, 0.82);
 }
+
 @media (max-width: 991px) {
   .displayBlock {
     display: flex;
@@ -108,9 +109,9 @@ main {
   }
   .SliderPc{
     display: none;
+    margin
   }
 }
-
 @media (min-width: 990px) {
   .displayNone {
     display: none;
@@ -118,6 +119,4 @@ main {
   .SliderCel{
     display: none;
   }
-  
 }
-
