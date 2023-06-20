@@ -17,13 +17,8 @@ usersLocalStorage.forEach(usuario => {
             <button class="me-3 nav-link" onclick='logout()'>Cerrar sesión</button>`
         }
         else if(usuario.role === "admin"){
-            divNavbar1.innerHTML = `
-            <button class="nav-link me-3 my-2" onclick='irInicio()'>Inicio</button>
-            <button class="nav-link me-3 my-2" onclick='irProductos()'>Productos</button>
-
-            <button class="nav-link me-3 my-2" onclick='irSobreNosotros()'>Sobre nosotros</button>`
             divNavbar2.innerHTML = `
-            <button class="me-3 nav-link margen">Administrador</button>
+            <button class="me-3 nav-link margen" onclick="irAdmin()">Administrador</button>
             <button class="me-3 nav-link" onclick='logout()' >Cerrar sesión</button>`
         }
     }
@@ -41,3 +36,5 @@ const irProductos = () => location.href = `/HTML/Productos.html?id=${idUsuario} 
 const irSobreNosotros = () => location.href = `/HTML/Sobrenosotros.html?id=${idUsuario}`
 
 const irCarrito = () => location.href = `/HTML/Carrito.html?id=${idUsuario} `
+
+const irAdmin = () => location.href = `/HTML/Administrador.html?id=${idUsuario} `

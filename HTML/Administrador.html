@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/IMG/favicon.png" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="/CSS/style.css" />
     <title>Tukson Gaming | Administrador</title>
@@ -35,72 +35,129 @@
           >
             <i class="bi bi-list text-white fs-2"></i>
           </button>
-          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <div class="d-flex displayBlock my-2" id="divNavbar1">
-              <a
-                class="nav-link me-2 my-2"
-                aria-current="page"
-                href="/index.html"
-                >Inicio</a
-              >
-              <a
-                class="nav-link me-2 my-2"
-                aria-current="page"
-                href="/HTML/Productos.html"
-                >Productos</a
-              >
-
-              <a class="nav-link me-2 my-2" href="/HTML/Sobrenosotros.html"
-                >Sobre nosotros</a
-              >
-            </div>
-            <div class="my-2 displayBlock d-flex" id="divNavbar2">
-              <a href="/HTML/Login.html" class="me-3 nav-link margen"
-                >Iniciar sesión</a
-              >
-              <a class="me-3 nav-link" href="/HTML/Register.html"
-                >Registrarse</a
-              >
-            </div>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarSupportedContent"
+          >
+            <div class="my-2 displayBlock d-flex" id="divNavbar2"></div>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="borde-section">
-        <h2 class="text-white mt-3 ms-3">Usuarios</h2>
+      <div class="container mt-3">
+        <h3 class="text-white">Usuarios</h3>
         <hr class="text-white" />
+        <section class="table-responsive">
+          <table class="table table-bordered border-dark">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">ID</th>
+                <th scope="col" class="text-center">Email</th>
+                <th scope="col" class="text-center">Usuario</th>
+                <th scope="col" class="text-center">Rol</th>
+                <th scope="col" class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tBody1"></tbody>
+          </table>
+        </section>
+        <div class="d-flex justify-content-between mt-5">
+          <h3 class="text-white">Productos</h3>
+          <button
+            class="btn botones"
+            data-bs-toggle="modal"
+            data-bs-target="#agregarProd"
+          >
+            Agregar producto
+          </button>
+        </div>
+        <hr class="text-white" />
+        <section class="table-responsive">
+          <table class="table table-bordered border-dark">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">Código</th>
+                <th scope="col" class="text-center">Nombre</th>
+                <th scope="col" class="text-center">Precio</th>
+                <th scope="col" class="text-center">Categoría</th>
+                <th scope="col" class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tBody2"></tbody>
+          </table>
+        </section>
+      </div>
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Email</th>
-              <th scope="col">Usuario</th>
-              <th scope="col">Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tBody"></tbody>
-        </table>
-      </section>
-      <section>
-        <h2 class="text-white mt-3 ms-3">Productos</h2>
-        <hr class="text-white" />
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Codigo</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Categoria</th>
-              <th scope="col">Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tBody1"></tbody>
-        </table>
-      </section>
+      <div
+        class="modal fade"
+        id="agregarProd"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content colorModals text-white">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Agrega tu producto
+              </h1>
+              <button
+                type="button"
+                class="btn-close bg-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="formId">
+                <div class="mb-3">
+                  <label for="crearProdNombre" class="form-label"
+                    >Nombre del producto</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"
+                      ><i class="bi bi-controller"></i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="crearProdNombre"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="crearProdPrecio" class="form-label">Precio</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"
+                      ><i class="bi bi-currency-dollar"></i
+                    ></span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="crearProdPrecio"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="crearProdCat" class="form-label">Categoría</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"
+                      ><i class="bi bi-tag-fill"></i
+                    ></span>
+                    <input type="text" class="form-control" id="crearProdCat" />
+                  </div>
+                </div>
+                <div class="text-end">
+                  <button type="submit" class="btn botones">Crear producto</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    >
     <footer class="py-1">
       <div class="container-fluid">
         <div class="row justify-content-center">
@@ -141,7 +198,8 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <script src="/JS/js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/JS/admin.js"></script>
     <script src="/JS/Logout.js"></script>
   </body>
 </html>
