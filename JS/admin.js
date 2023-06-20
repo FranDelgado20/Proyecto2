@@ -107,6 +107,7 @@ const sendChangeUsers = (id) => {
   usersLS[userIndexId].user = newUser;
   usersLS[userIndexId].role = newRole;
   localStorage.setItem("users", JSON.stringify(usersLS));
+  location.reload()
 };
 const changeInputUsers = (event) => {
   const { name, value } = event.target;
@@ -153,6 +154,7 @@ const deleteUser = (id) => {
         timer: 1500,
       });
       localStorage.setItem("users", JSON.stringify(userFilter));
+      location.reload()
     }
   });
 };
@@ -234,6 +236,7 @@ const sendChangeProd = (cod) => {
   prodLS[prodIndexCod].nombre = newName;
   prodLS[prodIndexCod].precio = newPrice;
   localStorage.setItem("productos", JSON.stringify(prodLS));
+  location.reload()
 };
 const changeInputProd = (event) => {
   const { name, value } = event.target;
@@ -269,6 +272,7 @@ const deleteProd = (cod) => {
         timer: 1500,
       });
       localStorage.setItem("productos", JSON.stringify(prodFilter));
+      location.reload()
     }
   });
 };
@@ -301,6 +305,7 @@ const crearProducto = (event) => {
     prodLS.push(newProd);
 
     localStorage.setItem("productos", JSON.stringify(prodLS));
+    location.reload()
   }
 };
 
