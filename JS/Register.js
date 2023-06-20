@@ -16,6 +16,10 @@ let errorDivP = document.getElementById("errorDivP");
 
 errorDivP.classList = "d-none";
 
+let errorDivLength = document.getElementById('errorDivLength')
+
+errorDivLength.classList = 'd-none'
+
 let repeatPassId = document.getElementById("repeatPassId");
 
 let errorDivRP = document.getElementById("errorDivRP");
@@ -46,6 +50,7 @@ let datosRegister = {
 const changeInput = (event) => {
   const { name, value } = event.target;
   datosRegister[name] = value;
+  
   switch (name) {
     case "email":
       errorDivEmail.classList = "d-none";
@@ -53,10 +58,12 @@ const changeInput = (event) => {
       break;
     case "user":
       errorDivUser.classList = "d-none";
+     
       userId.classList.remove("is-invalid");
       break;
     case "pass":
       errorDivP.classList = "d-none";
+      errorDivLength.classList = 'd-none'
       passId.classList.remove("is-invalid");
       break;
     case "repeatPass":
@@ -92,6 +99,11 @@ const register = () => {
             errorDivRP.classList = 'd-block text-danger'
             repeatPassId.classList.add('is-invalid')
             return
+    }
+    if (pass.length < 5){
+      errorDivLength.classList = 'd-block text-danger'
+      passId.classList.add('is-invalid')
+      return
     }
     if(pass != repeatPass){
         Swal.fire({
