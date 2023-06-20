@@ -152,8 +152,8 @@ const deleteUser = (id) => {
         showConfirmButton: false,
         timer: 1500,
       });
+      localStorage.setItem("users", JSON.stringify(userFilter));
     }
-    localStorage.setItem("users", JSON.stringify(userFilter));
   });
 };
 
@@ -268,8 +268,8 @@ const deleteProd = (cod) => {
         showConfirmButton: false,
         timer: 1500,
       });
+      localStorage.setItem("productos", JSON.stringify(prodFilter));
     }
-    localStorage.setItem("productos", JSON.stringify(prodFilter));
   });
 };
 const crearProducto = (event) => {
