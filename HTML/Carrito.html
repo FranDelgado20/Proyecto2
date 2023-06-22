@@ -61,30 +61,31 @@
       </nav>
     </header>
     <main>
-      <h3 class="text-white ms-3 mt-3">Mi carrito</h3>
-      <hr class="text-white" />
-      <section>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Codigo</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody id="tBody">
-
-          </tbody>
-        </table>
-        <div class="d-flex">
-
-          <h2 class="text-white me-2" >Total: </h2>
-          <h2 class="text-white" id="totalValor"></h2>
-        </div>
-        <button class="btn btn-success">Pagar</button>
-      </section>
+      <div class="container">
+        <h3 class="text-white mt-5">Mi carrito</h3>
+        <hr class="text-white" />
+        <section>
+          <table class="table table-bordered border-dark text-center">
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+  
+            </tbody>
+          </table>
+          <div class="d-flex">
+            <h3 class="text-white me-2" >Total:</h3>
+            <h3 class="text-white" id="totalValor"></h3>
+          </div>
+          <a class="btn botones mt-2" href="/HTML/Error404.html">Pagar</a>
+        </section>
+      </div>
     </main>
     <footer class="py-1">
       <div class="container-fluid">
@@ -122,5 +123,6 @@
     ></script>
     <script src="/JS/Logout.js"></script>
     <script src="/JS/carrito.js"></script>
+    <!-- <script src="/JS/CadaProducto.js"></script> -->
   </body>
 </html>
