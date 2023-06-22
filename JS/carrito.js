@@ -25,9 +25,16 @@ carrito.forEach((prod) => {
     const total = document.getElementById(`total${prodCodigo}`);
     const { value } = event.target;
     cantidadPrecio = precio * value;
-    totalFinal = totalFinal + cantidadPrecio
+    totalFinal += cantidadPrecio
     
-    total.innerText = cantidadPrecio;
+    
+    total.innerText = `$${cantidadPrecio}`
     totalValor.innerText = `$${totalFinal} `
   };
+
+  const irError404 = () => {
+    let idUsuario = location.search.split("=")[1];
+    
+    location.href = `/HTML/Error404.html?id=${idUsuario}`
+  }
   

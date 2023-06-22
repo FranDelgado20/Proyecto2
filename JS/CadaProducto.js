@@ -6,8 +6,6 @@ let codeProd = location.search.split('=')[2]
 
 let filtro = productosLS.filter((producto) => producto.codigo === parseInt(codeProd))
 
-
-
 divPadre.innerHTML = filtro.map((producto) =>
 `
 <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
@@ -45,21 +43,20 @@ divPadre.innerHTML = filtro.map((producto) =>
 `
 )
 
-const arrayProd = []
-
 const agregarProd = (codigo) => {
-    let prodLS = JSON.parse(localStorage.getItem('productos'))
+  let prodLS = JSON.parse(localStorage.getItem('productos'))
     const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
     const prodFilter = prodLS.filter(
-      (prod) => parseInt(prod.codigo) === parseInt(codigo)
+      (prod) => prod.codigo === codigo
     );
     const prodExiste = carritoLS.filter(
-      (prod) => parseInt(prod.codigo) === parseInt(codigo)
+      (prod) => prod.codigo === codigo
     );
     if (prodFilter.length > 0) {
       if (prodExiste.length === 0) {
-        arrayProd.push(prodFilter[0]);
-        localStorage.setItem("carrito", JSON.stringify(arrayProd));
+        carritoLS.push({...prodFilter[0]});
+
+        localStorage.setItem("carrito", JSON.stringify(carritoLS));
       }
     }
   };

@@ -1,6 +1,7 @@
 let divNavbar1 = document.getElementById("divNavbar1")
 let divNavbar2 = document.getElementById("divNavbar2")
 
+
 let usersLocalStorage = JSON.parse(localStorage.getItem("users")) || []
 let idUsuario = location.search.split("=")[1];
 const userIndex = usersLocalStorage.findIndex((usuario) => usuario.id === parseInt(idUsuario));
