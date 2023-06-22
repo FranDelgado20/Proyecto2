@@ -110,10 +110,6 @@ divProd.innerHTML = prodLS
   )
   .join("");
 
-
-
-
-
 let buscarId = document.getElementById("buscarId");
 
 const buscarProducto = (event) => {
