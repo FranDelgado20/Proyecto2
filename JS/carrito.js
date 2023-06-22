@@ -10,7 +10,7 @@ carrito.forEach((prod) => {
           <input type='number' class='form-control' min="0" name='cantidad.${prod.codigo}' id='${prod.codigo}'</input>
           </td>
          <td>$${prod.precio}</td>
-         <td id='total${prod.codigo}'>$0</td>
+         <td id='total${prod.codigo}'>$${prod.precio}</td>
     `;
     tBody.appendChild(tr);
     const input = document.getElementById(prod.codigo);
@@ -24,9 +24,9 @@ carrito.forEach((prod) => {
   const changeInput = (event, precio, prodCodigo) => {
     const total = document.getElementById(`total${prodCodigo}`);
     const { value } = event.target;
+
     cantidadPrecio = precio * value;
     totalFinal += cantidadPrecio
-    
     
     total.innerText = `$${cantidadPrecio}`
     totalValor.innerText = `$${totalFinal} `
