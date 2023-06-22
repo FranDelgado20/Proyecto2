@@ -6,7 +6,7 @@ let codeProd = location.search.split('=')[2]
 
 let filtro = productosLS.filter((producto) => producto.codigo === parseInt(codeProd))
 
-console.log(filtro)
+
 
 divPadre.innerHTML = filtro.map((producto) =>
 `
@@ -37,7 +37,7 @@ divPadre.innerHTML = filtro.map((producto) =>
         Envios a todo el pais
     </li>
 </ul>
-<button class='btn botones fs-5'><i class="bi bi-cart-plus"></i> Agregar al carrito</button>
+<button class='btn botones fs-5' onclick='agregarProd(${producto.codigo})'><i class="bi bi-cart-plus" ></i> Agregar al carrito</button>
 </div>
 <hr>
 </section>
@@ -48,3 +48,27 @@ divPadre.innerHTML = filtro.map((producto) =>
 
 `
 )
+
+const arrayProd = []
+
+const agregarProd = (codigo) => {
+    let prodLS = JSON.parse(localStorage.getItem('productos'))
+    console.log(codigo)
+    const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
+    const prodFilter = prodLS.filter(
+      (prod) => parseInt(prod.codigo) === parseInt(codigo)
+    );
+    const prodExiste = carritoLS.filter(
+      (prod) => parseInt(prod.codigo) === parseInt(codigo)
+    );
+    console.log(prodFilter)
+    console.log(prodExiste);
+    if (prodFilter.length > 0) {
+      if (prodExiste.length === 0) {
+        arrayProd.push(prodFilter[0]);
+        localStorage.setItem("carrito", JSON.stringify(arrayProd));
+      }
+    }
+  };
+
+ 
