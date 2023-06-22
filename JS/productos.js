@@ -102,7 +102,7 @@ divProd.innerHTML = prodLS
                 <hr>
                 <h6>Precio: $${producto.precio}</h6>
                 <p class="card-text">Categoría: ${producto.categoria}</p>
-                <a href="#" class="btn botones">Ver más</a>
+                <button class="btn botones" onclick='irVerMas(${producto.codigo})'>Ver más</button>
             </div>
         </div>
     </div>
@@ -110,30 +110,13 @@ divProd.innerHTML = prodLS
   )
   .join("");
 
-const arrayProd = []
 
-const agregarProd = (codigo) => {
-  console.log(codigo)
-  const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
-  const prodFilter = prodLS.filter(
-    (prod) => parseInt(prod.codigo) === parseInt(codigo)
-  );
-  const prodExiste = carritoLS.filter(
-    (prod) => parseInt(prod.codigo) === parseInt(codigo)
-  );
-  console.log(prodFilter)
-  console.log(prodExiste);
-  if (prodFilter.length > 0) {
-    if (prodExiste.length === 0) {
-      arrayProd.push(prodFilter[0]);
-      localStorage.setItem("carrito", JSON.stringify(arrayProd));
-    }
-  }
-};
+
+
 
 let buscarId = document.getElementById("buscarId");
 
-const buscarChamp = (event) => {
+const buscarProducto = (event) => {
   const { value } = event.target;
 
   let busqueda = value.toLowerCase();
@@ -156,7 +139,7 @@ const buscarChamp = (event) => {
                 <hr>
                 <h6>Precio: ${producto.precio}</h6>
                 <p class="card-text">Categoría: ${producto.categoria}</p>
-                <a href="#" class="btn botones">Ver más</a>
+                <button class="btn botones" onclick='irVerMas(${producto.codigo})'>Ver más</button>
             </div>
         </div>
     </div>
@@ -167,4 +150,17 @@ const buscarChamp = (event) => {
     divProd.innerHTML = `<h3 class="text-white text-center mt-3">No hay resultados</h3>`;
 };
 
-buscarId.addEventListener("input", buscarChamp);
+buscarId.addEventListener("input", buscarProducto);
+
+const irVerMas = (codigo) =>{
+  let userLS = JSON.parse(localStorage.getItem('users'))
+  userLS.forEach((usuario)=> {
+    if(usuario.login === true ){
+      location.href = `/HTML/CadaProducto.html?id=${usuario.id}?code=${codigo}`  
+    }
+    else{
+      location.href = `/HTML/Login.html `
+      
+    }
+  })
+}
