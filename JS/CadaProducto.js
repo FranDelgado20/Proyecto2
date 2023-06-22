@@ -42,10 +42,6 @@ divPadre.innerHTML = filtro.map((producto) =>
 <hr>
 </section>
 </div>
-
-
-
-
 `
 )
 
@@ -53,7 +49,6 @@ const arrayProd = []
 
 const agregarProd = (codigo) => {
     let prodLS = JSON.parse(localStorage.getItem('productos'))
-    console.log(codigo)
     const carritoLS = JSON.parse(localStorage.getItem("carrito")) || [];
     const prodFilter = prodLS.filter(
       (prod) => parseInt(prod.codigo) === parseInt(codigo)
@@ -61,8 +56,6 @@ const agregarProd = (codigo) => {
     const prodExiste = carritoLS.filter(
       (prod) => parseInt(prod.codigo) === parseInt(codigo)
     );
-    console.log(prodFilter)
-    console.log(prodExiste);
     if (prodFilter.length > 0) {
       if (prodExiste.length === 0) {
         arrayProd.push(prodFilter[0]);

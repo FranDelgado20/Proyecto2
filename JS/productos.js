@@ -100,7 +100,7 @@ divProd.innerHTML = prodLS
             <div class="card-body">
                 <h5 class="card-title">${producto.nombre}</h5>
                 <hr>
-                <h6>Precio: ${producto.precio}</h6>
+                <h6>Precio: $${producto.precio}</h6>
                 <p class="card-text">Categoría: ${producto.categoria}</p>
                 <button class="btn botones" onclick='irVerMas(${producto.codigo})'>Ver más</button>
             </div>
