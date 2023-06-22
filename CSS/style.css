@@ -30,7 +30,9 @@ footer {
 }
 li {
   list-style: none;
+  
 }
+
 main {
   margin-top: 82.78px;
 }
@@ -97,6 +99,14 @@ main {
   box-shadow: 0px 1px 20px 9px rgba(0, 0, 0, 0.82);
   -webkit-box-shadow: 0px 1px 20px 9px rgba(0, 0, 0, 0.82);
   -moz-box-shadow: 0px 1px 20px 9px rgba(0, 0, 0, 0.82);
+}
+.texto-producto{
+  color: #b7b7bb;
+}
+.lista-productos{
+  margin:0px;
+  padding: 0px;
+  color:#41e07e
 }
 
 @media (max-width: 991px) {

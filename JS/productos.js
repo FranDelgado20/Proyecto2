@@ -102,7 +102,7 @@ divProd.innerHTML = prodLS
                 <hr>
                 <h6>Precio: ${producto.precio}</h6>
                 <p class="card-text">Categoría: ${producto.categoria}</p>
-                <a href="#" class="btn botones">Ver más</a>
+                <button class="btn botones" onclick='irVerMas(${producto.codigo})'>Ver más</button>
             </div>
         </div>
     </div>
@@ -156,7 +156,7 @@ const buscarChamp = (event) => {
                 <hr>
                 <h6>Precio: ${producto.precio}</h6>
                 <p class="card-text">Categoría: ${producto.categoria}</p>
-                <a href="#" class="btn botones">Ver más</a>
+                <button class="btn botones" onclick='irVerMas(${producto.codigo})'>Ver más</button>
             </div>
         </div>
     </div>
@@ -168,3 +168,16 @@ const buscarChamp = (event) => {
 };
 
 buscarId.addEventListener("input", buscarChamp);
+
+const irVerMas = (codigo) =>{
+  let userLS = JSON.parse(localStorage.getItem('users'))
+  userLS.forEach((usuario)=> {
+    if(usuario.login === true ){
+      location.href = `/HTML/CadaProducto.html?id=${usuario.id}?code=${codigo}`  
+    }
+    else{
+      location.href = `/HTML/Login.html `
+      
+    }
+  })
+}
