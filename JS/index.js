@@ -111,16 +111,13 @@ divIndexProd.innerHTML = filtro.map(producto => `
 .join("");
 
 const irVerMas = (codigo) =>{
-  let userLS = JSON.parse(localStorage.getItem('users'))
-  userLS.forEach((usuario)=> {
-    if(usuario.login === true ){
-      location.href = `/HTML/CadaProducto.html?id=${usuario.id}?code=${codigo}`  
-    }
-    else{
-      location.href = `/HTML/Login.html `
-      
-    }
-  })
+  let usersLS = JSON.parse(localStorage.getItem('users'))
+  let idUsuario = location.search.split("=")[1]
+  let usuarioFiltro = usersLS.filter(usuario => usuario.id === parseInt(idUsuario))
+
+  console.log(usuarioFiltro)
+  if(usuarioFiltro.length !== 0){
+    if(usuarioFiltro[0].login === true) location.href = `/HTML/CadaProducto.html?id=${idUsuario}?code=${codigo}`
+  }
+  else location.href = `/HTML/Login.html `
 }
-
-

@@ -1,6 +1,6 @@
 let divNavbar1 = document.getElementById("divNavbar1")
 let divNavbar2 = document.getElementById("divNavbar2")
-
+let divRedes = document.getElementById("divRedes")
 
 let usersLocalStorage = JSON.parse(localStorage.getItem("users")) || []
 let idUsuario = location.search.split("=")[1];
@@ -16,11 +16,19 @@ usersLocalStorage.forEach(usuario => {
             divNavbar2.innerHTML = `
             <button class="me-3 nav-link margen" onclick='irCarrito()'>Mi carrito</button>
             <button class="me-3 nav-link" onclick='logout()'>Cerrar sesión</button>`
+            divRedes.innerHTML = `
+            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-facebook fs-1 mx-2 fb"></i></button>
+            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-twitter fs-1 mx-2 tw"></i></button>
+            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-instagram fs-1 mx-2 ig"></i></button>`
         }
         else if(usuario.role === "admin"){
             divNavbar2.innerHTML = `
             <button class="me-3 nav-link margen" onclick="irAdmin()">Administrador</button>
-            <button class="me-3 nav-link" onclick='logout()' >Cerrar sesión</button>`
+            <button class="me-3 nav-link" onclick='logout()'>Cerrar sesión</button>`
+            divRedes.innerHTML = `
+            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-facebook fs-1 mx-2 fb"></i></button>
+            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-twitter fs-1 mx-2 tw"></i></button>
+            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-instagram fs-1 mx-2 ig"></i></button>`
         }
     }
 });
@@ -39,3 +47,7 @@ const irSobreNosotros = () => location.href = `/HTML/Sobrenosotros.html?id=${idU
 const irCarrito = () => location.href = `/HTML/Carrito.html?id=${idUsuario} `
 
 const irAdmin = () => location.href = `/HTML/Administrador.html?id=${idUsuario} `
+
+const irError404 = () => location.href = `/HTML/Error404.html?id=${idUsuario}`
+
+
