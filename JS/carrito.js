@@ -20,8 +20,9 @@ carrito.forEach((prod) => {
   });
   let cantidadPrecio = 0;
   let totalValor = document.getElementById('totalValor')
-  let totalFinal = 0
   const changeInput = (event, precio, prodCodigo) => {
+    let totalFinal = 0
+    
     const total = document.getElementById(`total${prodCodigo}`);
     const { value } = event.target;
 
