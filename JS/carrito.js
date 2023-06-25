@@ -18,6 +18,7 @@ carrito.forEach((prod) => {
       changeInput(ev, prod.precio, prod.codigo)
     );
   });
+  // let cantidadProd = carrito.length
   let cantidadPrecio = 0;
   let totalValor = document.getElementById('totalValor')
   let totalFinal = 0
@@ -27,11 +28,11 @@ carrito.forEach((prod) => {
   const changeInput = (event, precio, prodCodigo) => {
     const total = document.getElementById(`total${prodCodigo}`);
     const { value } = event.target;
-
+    
+    totalFinal -= cantidadPrecio
     cantidadPrecio = precio * value;
     totalFinal += cantidadPrecio
     
-    // totalFinal = 0
     total.innerText = `$${cantidadPrecio}`
     totalValor.innerText = `$${totalFinal} `
 
@@ -44,3 +45,5 @@ carrito.forEach((prod) => {
   }
 
   
+
+
