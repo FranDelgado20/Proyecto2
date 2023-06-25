@@ -115,7 +115,6 @@ const irVerMas = (codigo) =>{
   let idUsuario = location.search.split("=")[1]
   let usuarioFiltro = usersLS.filter(usuario => usuario.id === parseInt(idUsuario))
 
-  console.log(usuarioFiltro)
   if(usuarioFiltro.length !== 0){
     if(usuarioFiltro[0].login === true) location.href = `/HTML/CadaProducto.html?id=${idUsuario}?code=${codigo}`
   }
