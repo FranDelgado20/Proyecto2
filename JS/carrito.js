@@ -1,9 +1,7 @@
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let tBody = document.getElementById("tBody");
 
-tBody.innerHTML = carrito
-  .map(
-    (prod) => `
+tBody.innerHTML = carrito.map((prod) => `
 
 <tr>
 <th scope="row">${prod.codigo}</th>
@@ -18,10 +16,13 @@ tBody.innerHTML = carrito
 <td>
 <button class="btn btn-outline-danger" onclick="eliminarProdCarrito(${prod.codigo})"><i class="bi bi-x-circle"></i></button>
 </td>
-</tr>`
-  )
-  .join("");
+</tr>`).join("")
 
+let cantidadProd = carrito.forEach(prod => {
+  let cantidadProd = document.getElementById(`${prod.codigo}`)
+  return cantidadProd
+})
+console.log(cantidadProd)
 const eliminarProdCarrito = (codigo) => {
   const prodFilter = carrito.filter((prod) => prod.codigo !== codigo);
   Swal.fire({
@@ -42,10 +43,10 @@ const eliminarProdCarrito = (codigo) => {
         timer: 1500,
       });
       localStorage.setItem("carrito", JSON.stringify(prodFilter));
-      location.reload();
+      location.reload()
     }
   });
-};
+}
 
 const restarCantidad = (codigo) => {
   carrito.forEach((producto) => {
@@ -153,5 +154,8 @@ const irAError404 = () => {
 //   })
 // }
 
+
+
+  
 
 
