@@ -63,6 +63,13 @@ const agregarProd = (codigo) => {
           showConfirmButton: false,
           timer: 1500,
         });
+      }else{
+        Swal.fire({
+          title: "El producto ya existe en el carrito",
+          icon: "error",
+          showConfirmButton: false,
+          timer: 1500,
+        })
       }
     }
   };
