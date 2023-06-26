@@ -55,8 +55,14 @@ const agregarProd = (codigo) => {
     if (prodFilter.length > 0) {
       if (prodExiste.length === 0) {
         carritoLS.push({...prodFilter[0]});
-
         localStorage.setItem("carrito", JSON.stringify(carritoLS));
+
+        Swal.fire({
+          title: "Producto agregado al carrito",
+          icon: "success",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     }
   };
