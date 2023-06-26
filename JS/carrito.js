@@ -18,7 +18,7 @@ carrito.forEach((prod) => {
       changeInput(ev, prod.precio, prod.codigo)
     );
   });
-}
+
 
 const restarCantidad = (codigo) =>{
   carrito.forEach((producto) => {
