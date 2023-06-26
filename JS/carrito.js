@@ -22,11 +22,6 @@ tBody.innerHTML = carrito
   )
   .join("");
 
-let cantidadProd = carrito.forEach((prod) => {
-  let cantidadProd = document.getElementById(`${prod.codigo}`);
-  return cantidadProd;
-});
-console.log(cantidadProd);
 const eliminarProdCarrito = (codigo) => {
   const prodFilter = carrito.filter((prod) => prod.codigo !== codigo);
   Swal.fire({
@@ -57,26 +52,106 @@ const restarCantidad = (codigo) => {
     if (producto.codigo === codigo) {
       if (producto.cantidad > 1) {
         producto.cantidad--;
+        const cantidadProd = document.getElementById(`${producto.codigo}`);
         cantidadProd.innerText = `${producto.cantidad}`;
+        const totalProd = document.getElementById(`total${producto.codigo}`)
+        let precioCantidad = producto.cantidad * producto.precio
+        totalProd.innerHTML = `$${precioCantidad}`
       }
     }
   });
 };
+
 const sumarCantidad = (codigo) => {
   carrito.forEach((producto) => {
     if (producto.codigo === codigo) {
       producto.cantidad++;
+      const cantidadProd = document.getElementById(`${producto.codigo}`);
       cantidadProd.innerText = `${producto.cantidad}`;
+      const totalProd = document.getElementById(`total${producto.codigo}`)
+      let precioCantidad = producto.cantidad * producto.precio
+      totalProd.innerHTML = `$${precioCantidad}`
     }
   });
 };
 let totalValor = document.getElementById("totalValor");
 let totalFinal = 0;
+
 totalValor.innerText = carrito.map((prod) => (totalFinal += prod.precio));
 totalValor.innerText = `$${totalFinal} `;
+
+const calcularPrecio = () => {
+  totalFinal = 0
+  carrito.map(prod => {
+    let cantidadPrecio = prod.cantidad * prod.precio
+
+  totalFinal += cantidadPrecio
+  totalValor.innerText = `$${totalFinal} `;
+    
+  })
+}
 
 const irAError404 = () => {
   let idUsuario = location.search.split("=")[1];
 
   location.href = `/HTML/Error404.html?id=${idUsuario}`;
 };
+// let totalValor = document.getElementById("totalValor");
+// let totalFinal = 0;
+
+// const restarCantidad = (codigo) => {
+//   totalFinal = 0
+//   let precioCantidad = 0
+//   carrito.forEach((producto) => {
+//     if (producto.codigo === codigo) {
+//       if (producto.cantidad > 1) {
+//         producto.cantidad--;
+
+//         const cantidadProd = document.getElementById(`${producto.codigo}`);
+//         cantidadProd.innerText = `${producto.cantidad}`;
+
+//         const totalProd = document.getElementById(`total${producto.codigo}`)
+//         precioCantidad = producto.cantidad * producto.precio
+//         totalProd.innerHTML = `$${precioCantidad}`
+
+//       }
+//     }
+//     totalFinal += precioCantidad
+//     totalValor.innerText = `$${totalFinal}`
+//   });
+// };
+
+// const sumarCantidad = (codigo) => {
+//   totalFinal = 0
+//   let precioCantidad = 0
+//   carrito.forEach((producto) => {
+//     if (producto.codigo === codigo) {
+//       producto.cantidad++;
+//       const cantidadProd = document.getElementById(`${producto.codigo}`);
+//       cantidadProd.innerText = `${producto.cantidad}`;
+
+//       const totalProd = document.getElementById(`total${producto.codigo}`)
+//       precioCantidad = producto.cantidad * producto.precio
+//       totalProd.innerHTML = `$${precioCantidad}`
+//     }
+//     totalFinal += precioCantidad
+//     totalValor.innerText = `$${totalFinal}`
+//   });
+// };
+
+// totalValor.innerText = carrito.map((prod) => (totalFinal += prod.precio));
+// totalValor.innerText = `$${totalFinal} `;
+
+// const calcularPrecio = () => {
+//   totalFinal = 0
+//   carrito.map(prod => {
+//     let cantidadPrecio = prod.cantidad * prod.precio
+
+//     totalFinal += cantidadPrecio
+//   totalValor.innerText = `$${totalFinal} `;
+    
+//   })
+// }
+
+
+
