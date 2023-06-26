@@ -1,9 +1,9 @@
-const carrito = JSON.parse(localStorage.getItem('carrito')) || []
-let tBody = document.getElementById('tBody')
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let tBody = document.getElementById("tBody");
 
-
-
-tBody.innerHTML = carrito.map((prod) => `
+tBody.innerHTML = carrito
+  .map(
+    (prod) => `
 
 <tr>
 <th scope="row">${prod.codigo}</th>
@@ -18,13 +18,15 @@ tBody.innerHTML = carrito.map((prod) => `
 <td>
 <button class="btn btn-outline-danger" onclick="eliminarProdCarrito(${prod.codigo})"><i class="bi bi-x-circle"></i></button>
 </td>
-</tr>`).join("")
+</tr>`
+  )
+  .join("");
 
-let cantidadProd = carrito.forEach(prod => {
-  let cantidadProd = document.getElementById(`${prod.codigo}`)
-  return cantidadProd
-})
-console.log(cantidadProd)
+let cantidadProd = carrito.forEach((prod) => {
+  let cantidadProd = document.getElementById(`${prod.codigo}`);
+  return cantidadProd;
+});
+console.log(cantidadProd);
 const eliminarProdCarrito = (codigo) => {
   const prodFilter = carrito.filter((prod) => prod.codigo !== codigo);
   Swal.fire({
@@ -45,40 +47,36 @@ const eliminarProdCarrito = (codigo) => {
         timer: 1500,
       });
       localStorage.setItem("carrito", JSON.stringify(prodFilter));
-      location.reload()
+      location.reload();
     }
   });
-}
+};
 
-const restarCantidad = (codigo) =>{
+const restarCantidad = (codigo) => {
   carrito.forEach((producto) => {
-    if(producto.codigo === codigo){
-      if(producto.cantidad > 1){
-        producto.cantidad--
-        cantidadProd.innerText = `${producto.cantidad}`
+    if (producto.codigo === codigo) {
+      if (producto.cantidad > 1) {
+        producto.cantidad--;
+        cantidadProd.innerText = `${producto.cantidad}`;
       }
-    } 
-  })
-}
-const sumarCantidad = (codigo) =>{
-  carrito.forEach((producto) => {
-    if(producto.codigo === codigo){
-      producto.cantidad++
-      cantidadProd.innerText = `${producto.cantidad}`
     }
-  })
-}
-  let totalValor = document.getElementById('totalValor')
-  let totalFinal = 0
-  totalValor.innerText = carrito.map(prod => totalFinal += prod.precio)
-  totalValor.innerText = `$${totalFinal} `
+  });
+};
+const sumarCantidad = (codigo) => {
+  carrito.forEach((producto) => {
+    if (producto.codigo === codigo) {
+      producto.cantidad++;
+      cantidadProd.innerText = `${producto.cantidad}`;
+    }
+  });
+};
+let totalValor = document.getElementById("totalValor");
+let totalFinal = 0;
+totalValor.innerText = carrito.map((prod) => (totalFinal += prod.precio));
+totalValor.innerText = `$${totalFinal} `;
 
-  const irAError404 = () => {
-    let idUsuario = location.search.split("=")[1];
-    
-    location.href = `/HTML/Error404.html?id=${idUsuario}`
-  }
+const irAError404 = () => {
+  let idUsuario = location.search.split("=")[1];
 
-  
-
-
+  location.href = `/HTML/Error404.html?id=${idUsuario}`;
+};
