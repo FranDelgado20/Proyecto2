@@ -1,8 +1,6 @@
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let tBody = document.getElementById("tBody");
 
-
-
 tBody.innerHTML = carrito.map((prod) => `
 
 <tr>
@@ -20,11 +18,6 @@ tBody.innerHTML = carrito.map((prod) => `
 </td>
 </tr>`).join("")
 
-let cantidadProd = carrito.forEach(prod => {
-  let cantidadProd = document.getElementById(`${prod.codigo}`)
-  return cantidadProd
-})
-console.log(cantidadProd)
 const eliminarProdCarrito = (codigo) => {
   const prodFilter = carrito.filter((prod) => prod.codigo !== codigo);
   Swal.fire({
@@ -55,29 +48,55 @@ const restarCantidad = (codigo) => {
     if (producto.codigo === codigo) {
       if (producto.cantidad > 1) {
         producto.cantidad--;
+        const cantidadProd = document.getElementById(`${producto.codigo}`);
         cantidadProd.innerText = `${producto.cantidad}`;
+        const totalProd = document.getElementById(`total${producto.codigo}`)
+
+        let precioCantidad = producto.cantidad * producto.precio
+        totalProd.innerHTML = `$${precioCantidad}`
       }
     }
   });
 };
+
 const sumarCantidad = (codigo) => {
   carrito.forEach((producto) => {
     if (producto.codigo === codigo) {
       producto.cantidad++;
+      const cantidadProd = document.getElementById(`${producto.codigo}`);
       cantidadProd.innerText = `${producto.cantidad}`;
+
+      const totalProd = document.getElementById(`total${producto.codigo}`)
+      precioCantidad = producto.cantidad * producto.precio
+      totalProd.innerHTML = `$${precioCantidad}`
     }
   });
 };
 let totalValor = document.getElementById("totalValor");
 let totalFinal = 0;
+
 totalValor.innerText = carrito.map((prod) => (totalFinal += prod.precio));
 totalValor.innerText = `$${totalFinal} `;
 
-  const irAError404 = () => {
-    let idUsuario = location.search.split("=")[1];
+const calcularPrecio = () => {
+  totalFinal = 0
+  carrito.map(prod => {
+    let cantidadPrecio = prod.cantidad * prod.precio
+
+    totalFinal += cantidadPrecio
+    totalValor.innerText = `$${totalFinal} `;
     
-    location.href = `/HTML/Error404.html?id=${idUsuario}`
-  }
+  })
+}
+
+const irAError404 = () => {
+  let idUsuario = location.search.split("=")[1];
+
+  location.href = `/HTML/Error404.html?id=${idUsuario}`;
+};
+
+
+
 
   
 
