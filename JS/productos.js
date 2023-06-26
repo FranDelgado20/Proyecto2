@@ -5,6 +5,7 @@ const productos = [
     precio: 21450,
     categoria: "Destacado",
     img: "/IMG/Productos/kumara.png",
+    cantidad: 1
   },
   {
     codigo: 101,
@@ -12,6 +13,7 @@ const productos = [
     precio: 15999,
     categoria: "Destacado",
     img: "/IMG/Productos/g203.png",
+    cantidad: 1
   },
   {
     codigo: 102,
@@ -19,6 +21,7 @@ const productos = [
     precio: 71550,
     categoria: "Destacado",
     img: "/IMG/Productos/cloud-flight.png",
+    cantidad: 1
   },
   {
     codigo: 103,
@@ -26,6 +29,7 @@ const productos = [
     precio: 93900,
     categoria: "Procesadores",
     img: "/IMG/Productos/ryzen5.png",
+    cantidad: 1
   },
   {
     codigo: 104,
@@ -33,6 +37,7 @@ const productos = [
     precio: 154900,
     categoria: "Procesadores",
     img: "/IMG/Productos/ryzen7.png",
+    cantidad: 1
   },
   {
     codigo: 105,
@@ -40,6 +45,7 @@ const productos = [
     precio: 40550,
     categoria: "Procesadores",
     img: "/IMG/Productos/i3.png",
+    cantidad: 1
   },
   {
     codigo: 106,
@@ -47,6 +53,7 @@ const productos = [
     precio: 204900,
     categoria: "Placas de video",
     img: "/IMG/Productos/gtx1660.png",
+    cantidad: 1
   },
   {
     codigo: 107,
@@ -54,6 +61,7 @@ const productos = [
     precio: 316900,
     categoria: "Placas de video",
     img: "/IMG/Productos/3070ti.png",
+    cantidad: 1
   },
   {
     codigo: 108,
@@ -61,6 +69,7 @@ const productos = [
     precio: 443650,
     categoria: "Placas de video",
     img: "/IMG/Productos/3090.png",
+    cantidad: 1
   },
   {
     codigo: 109,
@@ -68,6 +77,7 @@ const productos = [
     precio: 19199,
     categoria: "Almacenamiento",
     img: "/IMG/Productos/wd-green.png",
+    cantidad: 1
   },
   {
     codigo: 110,
@@ -75,6 +85,7 @@ const productos = [
     precio: 22199,
     categoria: "Almacenamiento",
     img: "/IMG/Productos/wd-blue.png",
+    cantidad: 1
   },
   {
     codigo: 111,
@@ -82,6 +93,7 @@ const productos = [
     precio: 24550,
     categoria: "RAM",
     img: "/IMG/Productos/ram.png",
+    cantidad: 1
   },
 ];
 
