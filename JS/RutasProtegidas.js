@@ -26,11 +26,11 @@ if (usuarioID) {
                 location.href = `/HTML/Administrador.html?id=${usuarioExiste[0].id}`;
               }
               break;
-            case usuarioExiste[0].role === "user":
-              if (!window.location.href.includes(`/HTML/Productos.html?id=${usuarioExiste[0].id}`)) {
-                location.href = `/HTML/Productos.html?id=${usuarioExiste[0].id}`;
-              }
-              break;
+            // case usuarioExiste[0].role === "user":
+            //   if (!window.location.href.includes(`/HTML/Productos.html?id=${usuarioExiste[0].id}`)) {
+            //     location.href = `/HTML/Productos.html?id=${usuarioExiste[0].id}`;
+            //   }
+            //   break;
           }
         }
     }else{
