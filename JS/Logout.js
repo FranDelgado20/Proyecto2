@@ -25,10 +25,6 @@ usersLocalStorage.forEach(usuario => {
             divNavbar2.innerHTML = `
             <button class="me-3 nav-link margen" onclick="irAdmin()">Administrador</button>
             <button class="me-3 nav-link" onclick='logout()'>Cerrar sesión</button>`
-            divRedes.innerHTML = `
-            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-facebook fs-1 mx-2 fb"></i></button>
-            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-twitter fs-1 mx-2 tw"></i></button>
-            <button onclick="irError404()" class="bg-transparent border-0"><i class="bi bi-instagram fs-1 mx-2 ig"></i></button>`
         }
     }
 });
