@@ -111,7 +111,7 @@ divIndexProd.innerHTML = filtro.map(producto => `
 .join("");
 
 const irVerMas = (codigo) =>{
-  let usersLS = JSON.parse(localStorage.getItem('users'))
+  let usersLS = JSON.parse(localStorage.getItem('users')) || []
   let idUsuario = location.search.split("=")[1]
   let usuarioFiltro = usersLS.filter(usuario => usuario.id === parseInt(idUsuario))
 
