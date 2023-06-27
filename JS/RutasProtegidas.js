@@ -15,4 +15,4 @@ if(usuarioID){
     } 
 
 }
-else if(usuarioID !== undefined) location.href = "/HTML/login.html"
+else location.href = "/HTML/login.html"
