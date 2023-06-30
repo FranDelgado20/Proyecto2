@@ -92,7 +92,7 @@ const calcularPrecio = () => {
 const irAError404 = () => {
   let idUsuario = location.search.split("=")[1];
 
-  location.href = `/html/Error404.html?id=${idUsuario}`;
+  location.href = `/html/error404.html?id=${idUsuario}`;
 };
 
 
