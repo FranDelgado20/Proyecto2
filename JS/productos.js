@@ -168,8 +168,8 @@ const irVerMas = (codigo) => {
   );
 
   if(usuarioFiltro.length !== 0){
-    if(usuarioFiltro[0].login === true && usuarioFiltro[0].role === "user") location.href = `/html/CadaProducto.html?id=${usuarioFiltro[0].id}?code=${codigo}`
-    else if(usuarioFiltro[0].login === true && usuarioFiltro[0].role === "admin") location.href = `/html/Administrador.html?id=${usuarioFiltro[0].id}`
+    if(usuarioFiltro[0].login === true && usuarioFiltro[0].role === "user") location.href = `/html/cadaproducto.html?id=${usuarioFiltro[0].id}?code=${codigo}`
+    else if(usuarioFiltro[0].login === true && usuarioFiltro[0].role === "admin") location.href = `/html/administrador.html?id=${usuarioFiltro[0].id}`
   }
-  else location.href = `/html/Login.html`
+  else location.href = `/html/login.html`
 }
