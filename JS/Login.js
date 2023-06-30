@@ -57,7 +57,7 @@ const login = () => {
       } else if (userExist[0].role === "admin") {
         usersLS[userIndex].login = true;
         localStorage.setItem("users", JSON.stringify(usersLS));
-        location.href = `/HTML/Administrador.html?id=${userExist[0].id}`;
+        location.href = `/html/Administrador.html?id=${userExist[0].id}`;
       }
     } else {
       Swal.fire({

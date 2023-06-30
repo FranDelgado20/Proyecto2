@@ -10,46 +10,46 @@ if (usuarioID) {
     if(usuarioExiste.length > 0){
         if (!usuariosLS[indexUsuario].login) {
             if(usuarioExiste[0].role === "admin"){
-                if (!window.location.href.includes(`/HTML/Administrador.html?id=${usuarioExiste[0].id}`)) {
-                  location.href = `/HTML/Administrador.html?id=${usuarioExiste[0].id}`;
+                if (!window.location.href.includes(`/html/Administrador.html?id=${usuarioExiste[0].id}`)) {
+                  location.href = `/html/Administrador.html?id=${usuarioExiste[0].id}`;
                 }
             }else{
-                if (!window.location.href.includes(`/HTML/Productos.html?id=${usuarioExiste[0].id}`)) {
-                    location.href = `/HTML/Productos.html?id=${usuarioExiste[0].id}`;
+                if (!window.location.href.includes(`/html/Productos.html?id=${usuarioExiste[0].id}`)) {
+                    location.href = `/html/Productos.html?id=${usuarioExiste[0].id}`;
                   }
             }
         } 
         else {
           switch (true) {
             case usuarioExiste[0].role === "admin":
-              if (!window.location.href.includes(`/HTML/Administrador.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/index.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/HTML/Productos.html?id=${usuarioExiste[0].id}`)) {
-                location.href = `/HTML/Administrador.html?id=${usuarioExiste[0].id}`;
+              if (!window.location.href.includes(`/html/Administrador.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/index.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/Productos.html?id=${usuarioExiste[0].id}`)) {
+                location.href = `/html/Administrador.html?id=${usuarioExiste[0].id}`;
               }
               break;
             case usuarioExiste[0].role === "user":
-              if (!window.location.href.includes(`/HTML/Productos.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/HTML/CadaProducto.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/HTML/Sobrenosotros.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/index.html?id=${usuarioExiste[0].id}`)&& !window.location.href.includes(`/HTML/Carrito.html?id=${usuarioExiste[0].id}`))  {
-                location.href = `/HTML/Productos.html?id=${usuarioExiste[0].id}`;
+              if (!window.location.href.includes(`/html/Productos.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/CadaProducto.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/Sobrenosotros.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/index.html?id=${usuarioExiste[0].id}`)&& !window.location.href.includes(`/html/Carrito.html?id=${usuarioExiste[0].id}`))  {
+                location.href = `/html/Productos.html?id=${usuarioExiste[0].id}`;
               }
               break;
           }
         }
     }else{
-        location.href = "/HTML/login.html"
+        location.href = "/html/login.html"
     }
   } else {
     if(usuarioExiste.length > 0){
 
         if(usuarioExiste[0].role === "admin"){
-            if (!window.location.href.includes(`/HTML/Administrador.html?id=${usuarioExiste[0].id}`)) {
-              location.href = `/HTML/Administrador.html?id=${usuarioExiste[0].id}`;
+            if (!window.location.href.includes(`/html/Administrador.html?id=${usuarioExiste[0].id}`)) {
+              location.href = `/html/Administrador.html?id=${usuarioExiste[0].id}`;
             }
         }
         else if(usuarioExiste[0].role === "user"){
-            if (!window.location.href.includes(`/HTML/Productos.html?id=${usuarioExiste[0].id}`)) {
-                location.href = `/HTML/Productos.html?id=${usuarioExiste[0].id}`;
+            if (!window.location.href.includes(`/html/Productos.html?id=${usuarioExiste[0].id}`)) {
+                location.href = `/html/Productos.html?id=${usuarioExiste[0].id}`;
               }
         }
     }
-    else location.href = "/HTML/login.html"
+    else location.href = "/html/login.html"
   }
   
