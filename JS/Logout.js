@@ -43,14 +43,14 @@ const logout = () => {
 }
 const irInicio = () => location.href = `/index.html?id=${idUsuario}`
 
-const irProductos = () => location.href = `/HTML/Productos.html?id=${idUsuario} `
+const irProductos = () => location.href = `/html/Productos.html?id=${idUsuario} `
  
-const irSobreNosotros = () => location.href = `/HTML/Sobrenosotros.html?id=${idUsuario}`
+const irSobreNosotros = () => location.href = `/html/Sobrenosotros.html?id=${idUsuario}`
 
-const irCarrito = () => location.href = `/HTML/Carrito.html?id=${idUsuario} `
+const irCarrito = () => location.href = `/html/Carrito.html?id=${idUsuario} `
 
-const irAdmin = () => location.href = `/HTML/Administrador.html?id=${idUsuario} `
+const irAdmin = () => location.href = `/html/Administrador.html?id=${idUsuario} `
 
-const irError404 = () => location.href = `/HTML/Error404.html?id=${idUsuario}`
+const irError404 = () => location.href = `/html/Error404.html?id=${idUsuario}`
 
 
