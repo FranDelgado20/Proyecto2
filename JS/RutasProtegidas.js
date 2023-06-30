@@ -27,7 +27,7 @@ if (usuarioID) {
               }
               break;
             case usuarioExiste[0].role === "user":
-              if (!window.location.href.includes(`/html/productos.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/CadaProducto.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/Sobrenosotros.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/index.html?id=${usuarioExiste[0].id}`)&& !window.location.href.includes(`/html/Carrito.html?id=${usuarioExiste[0].id}`))  {
+              if (!window.location.href.includes(`/html/productos.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/cadaproducto.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/html/sobrenosotros.html?id=${usuarioExiste[0].id}`) && !window.location.href.includes(`/index.html?id=${usuarioExiste[0].id}`)&& !window.location.href.includes(`/html/carrito.html?id=${usuarioExiste[0].id}`))  {
                 location.href = `/html/productos.html?id=${usuarioExiste[0].id}`;
               }
               break;
