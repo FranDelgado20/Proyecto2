@@ -98,9 +98,9 @@ const productos = [
   },
 ];
 
-localStorage.setItem("productos", JSON.stringify(productos));
+if(!JSON.parse(localStorage.getItem("productos"))) localStorage.setItem("productos", JSON.stringify(productos));
 
-let prodLS = JSON.parse(localStorage.getItem("productos"));
+let prodLS = JSON.parse(localStorage.getItem("productos"))
 
 let divIndexProd = document.getElementById("divIndexProd")
 
@@ -128,8 +128,8 @@ const irVerMas = (codigo) =>{
   let usuarioFiltro = usersLS.filter(usuario => usuario.id === parseInt(idUsuario))
 
   if(usuarioFiltro.length !== 0){
-    if(usuarioFiltro[0].login === true) location.href = `/HTML/CadaProducto.html?id=${idUsuario}?code=${codigo}`
-    else location.href = `/HTML/Login.html`
+    if(usuarioFiltro[0].login === true && usuarioFiltro[0].role === "user") location.href = `/HTML/CadaProducto.html?id=${usuarioFiltro[0].id}?code=${codigo}`
+    else if(usuarioFiltro[0].login === true && usuarioFiltro[0].role === "admin") location.href = `/HTML/Administrador.html?id=${usuarioFiltro[0].id}`
   }
   else location.href = `/HTML/Login.html`
 }

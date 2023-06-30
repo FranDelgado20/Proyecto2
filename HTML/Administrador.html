@@ -38,7 +38,8 @@
             class="collapse navbar-collapse justify-content-between"
             id="navbarSupportedContent"
           >
-            <div class="my-2 displayBlock d-flex ms-3 w-100 justify-content-between" id="divNavbar2"></div>
+            <div class="my-2 displayBlock d-flex ms-3" id="divNavbar1"></div>
+            <div class="my-2 displayBlock d-flex ms-3" id="divNavbar2"></div>
           </div>
         </div>
       </nav>
@@ -148,6 +149,18 @@
                     <input type="text" class="form-control" id="crearProdCat" />
                   </div>
                 </div>
+                <div class="mb-3">
+                  <label for="crearProdImg" class="form-label">Imagen</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"
+                      ><i class="bi bi-card-image"></i></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="crearProdImg"
+                    />
+                  </div>
+                </div>
                 <div class="text-end">
                   <button type="submit" class="btn botones">
                     Crear producto
@@ -162,12 +175,12 @@
     <footer class="py-1">
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="text-center mt-lg-2 mt-md-3 pb-sm-3">
               <img src="/IMG/logo.png" alt="Logo" width="150" />
             </div>
           </div>
-          <hr class="text-white displayNone" />
+          <hr class="text-white displayNone">
           <div class="col-lg-6 col-md-6 col-sm-12 my-2">
             <h4 class="text-white text-center">Horarios de atención</h4>
             <ul class="text-white text-center">
@@ -176,7 +189,15 @@
               <li>Domingos y feriados el local se encuentra cerrado.</li>
             </ul>
           </div>
-          <hr class="text-white displayNone" />
+          <hr class="text-white displayNone">
+          <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+            <h4 class="text-white text-center">Buscanos en nuestras redes</h4>
+            <div class="text-center" id="divRedes">
+              <a href="/HTML/Error404.html"><i class="bi bi-facebook fs-1 mx-2 fb"></i></a>
+              <a href="/HTML/Error404.html"><i class="bi bi-twitter fs-1 mx-2 tw"></i></a>
+              <a href="/HTML/Error404.html"><i class="bi bi-instagram fs-1 mx-2 ig"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

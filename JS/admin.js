@@ -9,6 +9,7 @@ let formId = document.getElementById("formId");
 let crearProdNombre = document.getElementById("crearProdNombre");
 let crearProdPrecio = document.getElementById("crearProdPrecio");
 let crearProdCat = document.getElementById("crearProdCat");
+let crearProdImg = document.getElementById("crearProdImg")
 
 tBody1.innerHTML = usersLS
   .map(
@@ -224,6 +225,7 @@ Editar
 
 let newName = "";
 let newPrice = null;
+let newImg = ""
 
 let inputNameId = document.getElementById("inputNameId");
 let inputName = document.querySelectorAll('input[name="inputName"]');
@@ -285,10 +287,12 @@ const crearProducto = (event) => {
     nombre: "",
     precio: null,
     categoria: "",
+    img: ""
   };
   newProd.nombre = crearProdNombre.value;
   newProd.precio = parseInt(crearProdPrecio.value);
   newProd.categoria = crearProdCat.value;
+  newProd.img = crearProdImg.value
 
   if (
     newProd.nombre === "" ||

@@ -76,7 +76,7 @@ let totalValor = document.getElementById("totalValor");
 let totalFinal = 0;
 
 totalValor.innerText = carrito.map((prod) => (totalFinal += prod.precio));
-totalValor.innerText = `$${totalFinal} `;
+totalValor.innerText = `$${parseFloat(totalFinal).toLocaleString()}`;
 
 const calcularPrecio = () => {
   totalFinal = 0
@@ -84,7 +84,7 @@ const calcularPrecio = () => {
     let cantidadPrecio = prod.cantidad * prod.precio
 
     totalFinal += cantidadPrecio
-    totalValor.innerText = `$${totalFinal} `;
+    totalValor.innerText = `$${parseFloat(totalFinal).toLocaleString()}`;
     
   })
 }
